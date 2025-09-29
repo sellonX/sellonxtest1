@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <style>
+    .logo-text { font-family: Arial, sans-serif; font-weight: bold; font-size: 28px; }
+    .logo-text-main { fill: white; }
+    .logo-text-accent { fill: #ff6b35; }
+  </style>
+  <rect x="10" y="10" width="40" height="40" rx="5" fill="#153f7a" />
+  <path d="M10 25 L30 15 L20 35 Z" fill="#ff6b35" />
+  <text x="25" y="35" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="24">S</text>
+  <text x="80" y="35" class="logo-text">
+    <tspan class="logo-text-main">Sellon</tspan><tspan class="logo-text-accent">X</tspan>
+  </text>
+</svg>

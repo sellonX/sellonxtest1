@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Ads - SellonX</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/browse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="SellonX Logo">
+                    </a>
+                </div>
+                <div class="header-right">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="browse.html" class="active">Browse Ads</a></li>
+                            <li><a href="near-me.html">Near Me</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-buttons">
+                        <button class="btn btn-post" id="postAdBtn">Post Ad</button>
+                        <button class="btn btn-login" id="loginBtn">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Browse Header -->
+        <section class="browse-header">
+            <div class="container">
+                <h1>Browse Ads</h1>
+                <div class="search-container">
+                    <input type="text" placeholder="What are you looking for?">
+                    <select name="location" id="location">
+                        <option value="">Select Location</option>
+                        <option value="birganj">Birganj</option>
+                        <option value="hetauda">Hetauda</option>
+                        <option value="janakpur">Janakpur</option>
+                    </select>
+                    <button class="btn btn-search">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Browse Content -->
+        <section class="browse-content">
+            <div class="container">
+                <div class="browse-layout">
+                    <!-- Sidebar - Categories -->
+                    <div class="browse-sidebar">
+                        <div class="sidebar-block">
+                            <h3>Categories</h3>
+                            <ul class="category-list">
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-mobile-alt"></i> Mobile
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Mobile Phones</a></li>
+                                        <li><a href="#">Accessories</a></li>
+                                        <li><a href="#">Tablets</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-laptop"></i> Computers
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Computers & Laptops</a></li>
+                                        <li><a href="#">Computer Accessories</a></li>
+                                        <li><a href="#">Hard Disks, Printers & Monitors</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-car"></i> Cars
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-motorcycle"></i> Motorcycle
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-bicycle"></i> Bicycle
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-tv"></i> Electronics
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">TVs, Video - Audio</a></li>
+                                        <li><a href="#">Kitchen & Other Appliances</a></li>
+                                        <li><a href="#">Cameras & Lenses</a></li>
+                                        <li><a href="#">Games & Entertainment</a></li>
+                                        <li><a href="#">Fridges</a></li>
+                                        <li><a href="#">ACs</a></li>
+                                        <li><a href="#">Washing Machines</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-home"></i> Real Estate
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">For Sale: Houses & Apartments</a></li>
+                                        <li><a href="#">For Rent: Houses & Apartments</a></li>
+                                        <li><a href="#">Lands & Plots</a></li>
+                                        <li><a href="#">For Rent: Shops & Offices</a></li>
+                                        <li><a href="#">For Sale: Shops & Offices</a></li>
+                                        <li><a href="#">PG & Guest Houses</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-cogs"></i> Spare Parts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-briefcase"></i> Jobs
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Data entry & Back office</a></li>
+                                        <li><a href="#">Sales & Marketing</a></li>
+                                        <li><a href="#">BPO & Telecaller</a></li>
+                                        <li><a href="#">Driver</a></li>
+                                        <li><a href="#">Office Assistant</a></li>
+                                        <li><a href="#">Delivery & Collection</a></li>
+                                        <li><a href="#">Teacher</a></li>
+                                        <li><a href="#">Cook</a></li>
+                                        <li><a href="#">Receptionist & Front office</a></li>
+                                        <li><a href="#">Operator & Technician</a></li>
+                                        <li><a href="#">IT Engineer & Developer</a></li>
+                                        <li><a href="#">Hotel & Travel Executive</a></li>
+                                        <li><a href="#">Accountant</a></li>
+                                        <li><a href="#">Designer</a></li>
+                                        <li><a href="#">Other Jobs</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-couch"></i> Furniture
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Sofa & Dining</a></li>
+                                        <li><a href="#">Beds & Wardrobes</a></li>
+                                        <li><a href="#">Home Decor & Garden</a></li>
+                                        <li><a href="#">Kids Furniture</a></li>
+                                        <li><a href="#">Other Household Items</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-tshirt"></i> Fashion
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Men</a></li>
+                                        <li><a href="#">Women</a></li>
+                                        <li><a href="#">Kids</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-paw"></i> Pets
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Pet Food & Accessories</a></li>
+                                        <li><a href="#">Dogs</a></li>
+                                        <li><a href="#">Other Pets</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-book"></i> Books, Sports & Hobbies
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Books</a></li>
+                                        <li><a href="#">Gym & Fitness</a></li>
+                                        <li><a href="#">Musical Instruments</a></li>
+                                        <li><a href="#">Sports Equipment</a></li>
+                                        <li><a href="#">Other Hobbies</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="category-item">
+                                        <i class="fas fa-concierge-bell"></i> Services
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Education & Classes</a></li>
+                                        <li><a href="#">Tours & Travel</a></li>
+                                        <li><a href="#">Electronics Repair & Services</a></li>
+                                        <li><a href="#">Health & Beauty</a></li>
+                                        <li><a href="#">Home Renovation & Repair</a></li>
+                                        <li><a href="#">Land</a></li>
+                                        <li><a href="#">Other Services</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sidebar-block">
+                            <h3>Location</h3>
+                            <div class="location-filter">
+                                <div class="form-check">
+                                    <input type="checkbox" id="locBirganj" checked>
+                                    <label for="locBirganj">Birganj</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" id="locHetauda" checked>
+                                    <label for="locHetauda">Hetauda</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" id="locJanakpur" checked>
+                                    <label for="locJanakpur">Janakpur</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content - Listings -->
+                    <div class="browse-main">
+                        <div class="browse-controls">
+                            <div class="browse-results-count">
+                                <span>Showing 1-24 of 256 ads</span>
+                            </div>
+                            <div class="browse-sort">
+                                <label for="sort">Sort by:</label>
+                                <select id="sort">
+                                    <option value="newest">Newest first</option>
+                                    <option value="price_low">Price: Low to High</option>
+                                    <option value="price_high">Price: High to Low</option>
+                                    <option value="popular">Most Popular</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="listings-grid" id="browseListings">
+                            <!-- Featured listings will be inserted here -->
+                        </div>
+                        
+                        <div class="pagination">
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="images/logo-white.png" alt="SellonX Logo">
+                    </div>
+                    <ul class="footer-links">
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="safety-tips.html">Safety Tips</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-center">
+                    <div class="newsletter">
+                        <h3>Subscribe to our newsletter</h3>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button class="btn btn-subscribe">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SellonX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modals -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="signup">Sign Up</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="auth-form active" id="loginForm">
+                    <h2>Login to Your Account</h2>
+                    <div class="social-login">
+                        <button class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Login with Facebook</button>
+                        <button class="btn btn-google"><i class="fab fa-google"></i> Login with Google</button>
+                    </div>
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Remember me</label>
+                            <a href="#" class="forgot-password" id="forgotPasswordLink">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                </div>
+                
+                <!-- Sign Up Form -->
+                <div class="auth-form" id="signupForm">
+                    <h2>Create an Account</h2>
+                    <div class="social-login">
+                        <button class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Sign up with Facebook</button>
+                        <button class="btn btn-google"><i class="fab fa-google"></i> Sign up with Google</button>
+                    </div>
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <input type="password" id="signupConfirmPassword" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" id="termsAgree" required>
+                            <label for="termsAgree">I agree to the <a href="terms.html">Terms and Conditions</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </form>
+                </div>
+                
+                <!-- Forgot Password Form -->
+                <div class="auth-form" id="forgotPasswordForm">
+                    <h2>Reset Your Password</h2>
+                    <p>Enter your email address and we'll send you a link to reset your password.</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="resetEmail">Email</label>
+                            <input type="email" id="resetEmail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Reset Link</button>
+                        <div class="form-footer">
+                            <a href="#" id="backToLoginLink">Back to Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Ad Modal -->
+    <div class="modal" id="postAdModal">
+        <div class="modal-content modal-lg">
+            <span class="close-modal">&times;</span>
+            <div class="post-ad-container">
+                <h2>Please Login to Post an Ad</h2>
+                <p>You need to be logged in to post an ad on SellonX.</p>
+                <button class="btn btn-primary" id="goToLoginBtn">Login Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/browse.js"></script>
+</body>
+</html>

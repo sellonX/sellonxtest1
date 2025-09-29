@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Ad - SellonX</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/post-ad.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="SellonX Logo">
+                    </a>
+                </div>
+                <div class="header-right">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="browse.html">Browse Ads</a></li>
+                            <li><a href="near-me.html">Near Me</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-buttons">
+                        <button class="btn btn-post active" id="postAdBtn">Post Ad</button>
+                        <button class="btn btn-login" id="loginBtn">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Post Ad Header -->
+        <section class="post-ad-header">
+            <div class="container">
+                <h1>Post Your Ad</h1>
+                <p>Fill in the details below to create your ad</p>
+            </div>
+        </section>
+
+        <!-- Post Ad Form -->
+        <section class="post-ad-form">
+            <div class="container">
+                <div class="form-container">
+                    <!-- Step Progress -->
+                    <div class="step-progress">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Select Category</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Ad Details</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Contact Info</div>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-label">Review & Submit</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Select Category -->
+                    <div class="form-step active" id="step1">
+                        <h2>Choose a Category</h2>
+                        <p>Select the category that best fits your ad</p>
+                        
+                        <div class="category-grid">
+                            <div class="category-card" data-category="mobile">
+                                <div class="category-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3>Mobile</h3>
+                            </div>
+                            <div class="category-card" data-category="computers">
+                                <div class="category-icon">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <h3>Computers</h3>
+                            </div>
+                            <div class="category-card" data-category="cars">
+                                <div class="category-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <h3>Cars</h3>
+                            </div>
+                            <div class="category-card" data-category="motorcycle">
+                                <div class="category-icon">
+                                    <i class="fas fa-motorcycle"></i>
+                                </div>
+                                <h3>Motorcycle</h3>
+                            </div>
+                            <div class="category-card" data-category="bicycle">
+                                <div class="category-icon">
+                                    <i class="fas fa-bicycle"></i>
+                                </div>
+                                <h3>Bicycle</h3>
+                            </div>
+                            <div class="category-card" data-category="electronics">
+                                <div class="category-icon">
+                                    <i class="fas fa-tv"></i>
+                                </div>
+                                <h3>Electronics</h3>
+                            </div>
+                            <div class="category-card" data-category="real-estate">
+                                <div class="category-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <h3>Real Estate</h3>
+                            </div>
+                            <div class="category-card" data-category="spare-parts">
+                                <div class="category-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h3>Spare Parts</h3>
+                            </div>
+                            <div class="category-card" data-category="jobs">
+                                <div class="category-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h3>Jobs</h3>
+                            </div>
+                            <div class="category-card" data-category="furniture">
+                                <div class="category-icon">
+                                    <i class="fas fa-couch"></i>
+                                </div>
+                                <h3>Furniture</h3>
+                            </div>
+                            <div class="category-card" data-category="fashion">
+                                <div class="category-icon">
+                                    <i class="fas fa-tshirt"></i>
+                                </div>
+                                <h3>Fashion</h3>
+                            </div>
+                            <div class="category-card" data-category="pets">
+                                <div class="category-icon">
+                                    <i class="fas fa-paw"></i>
+                                </div>
+                                <h3>Pets</h3>
+                            </div>
+                            <div class="category-card" data-category="books-sports">
+                                <div class="category-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <h3>Books & Sports</h3>
+                            </div>
+                            <div class="category-card" data-category="services">
+                                <div class="category-icon">
+                                    <i class="fas fa-concierge-bell"></i>
+                                </div>
+                                <h3>Services</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="subcategory-selection" id="subcategorySelection">
+                            <h3>Select a Subcategory</h3>
+                            <select id="subcategorySelect" class="form-control">
+                                <option value="">Select a category first</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button class="btn btn-primary btn-next" id="step1Next" disabled>Continue</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Ad Details -->
+                    <div class="form-step" id="step2">
+                        <h2>Ad Details</h2>
+                        <p>Provide details about what you're selling</p>
+                        
+                        <form id="adDetailsForm">
+                            <div class="form-group">
+                                <label for="adTitle">Title *</label>
+                                <input type="text" id="adTitle" class="form-control" required maxlength="70">
+                                <div class="char-count">0/70</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="adDescription">Description *</label>
+                                <textarea id="adDescription" class="form-control" rows="6" required maxlength="4000"></textarea>
+                                <div class="char-count">0/4000</div>
+                                <div class="form-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    Include condition, features, and reason for selling
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="adPrice">Price *</label>
+                                <div class="price-input">
+                                    <span class="currency">रू</span>
+                                    <input type="number" id="adPrice" class="form-control" required min="0">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Condition *</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="conditionNew" name="condition" value="new" required>
+                                        <label for="conditionNew">New</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="conditionUsed" name="condition" value="used">
+                                        <label for="conditionUsed">Used</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Photos (Max 15) *</label>
+                                <div class="photo-upload-container">
+                                    <div class="photo-upload-box" id="photoUploadBox">
+                                        <i class="fas fa-plus"></i>
+                                        <span>Add Photos</span>
+                                        <input type="file" id="photoUpload" multiple accept="image/*">
+                                    </div>
+                                    <div class="photo-preview-container" id="photoPreviewContainer"></div>
+                                </div>
+                                <div class="form-hint">
+                                    <h4>Photo Tips</h4>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Use good lighting and clear backgrounds</li>
+                                        <li><i class="fas fa-check"></i> Show the item from multiple angles</li>
+                                        <li><i class="fas fa-check"></i> Highlight any defects or wear</li>
+                                        <li><i class="fas fa-times"></i> Avoid using stock photos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div class="form-navigation">
+                            <button class="btn btn-secondary btn-prev">Back</button>
+                            <button class="btn btn-primary btn-next" id="step2Next">Continue</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Contact Info -->
+                    <div class="form-step" id="step3">
+                        <h2>Contact Information</h2>
+                        <p>How potential buyers can reach you</p>
+                        
+                        <form id="contactInfoForm">
+                            <div class="form-group">
+                                <label for="adLocation">Location *</label>
+                                <select id="adLocation" class="form-control" required>
+                                    <option value="">Select location</option>
+                                    <option value="birganj">Birganj</option>
+                                    <option value="hetauda">Hetauda</option>
+                                    <option value="janakpur">Janakpur</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="adAddress">Address (Neighborhood/Area)</label>
+                                <input type="text" id="adAddress" class="form-control" placeholder="e.g., Adarshnagar, Ghantaghar">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactName">Contact Name *</label>
+                                <input type="text" id="contactName" class="form-control" required placeholder="Your name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number *</label>
+                                <input type="tel" id="contactPhone" class="form-control" required placeholder="Your phone number">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" class="form-control" placeholder="Your email address">
+                            </div>
+                            
+                            <div class="form-group form-check">
+                                <input type="checkbox" id="showPhone" checked>
+                                <label for="showPhone">Show my phone number in the ad</label>
+                            </div>
+                        </form>
+                        
+                        <div class="form-navigation">
+                            <button class="btn btn-secondary btn-prev">Back</button>
+                            <button class="btn btn-primary btn-next" id="step3Next">Continue</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Review & Submit -->
+                    <div class="form-step" id="step4">
+                        <h2>Review Your Ad</h2>
+                        <p>Please review your ad details before submitting</p>
+                        
+                        <div class="ad-preview">
+                            <div class="ad-preview-section">
+                                <h3>Category</h3>
+                                <p id="previewCategory">Mobile > Mobile Phones</p>
+                            </div>
+                            
+                            <div class="ad-preview-section">
+                                <h3>Title</h3>
+                                <p id="previewTitle">iPhone 14 Pro Max - Like New</p>
+                            </div>
+                            
+                            <div class="ad-preview-section">
+                                <h3>Price</h3>
+                                <p id="previewPrice">रू 120,000</p>
+                            </div>
+                            
+                            <div class="ad-preview-section">
+                                <h3>Description</h3>
+                                <p id="previewDescription">iPhone 14 Pro Max in excellent condition. Used for only 3 months. No scratches or dents. Comes with original box and accessories.</p>
+                            </div>
+                            
+                            <div class="ad-preview-section">
+                                <h3>Condition</h3>
+                                <p id="previewCondition">Used</p>
+                            </div>
+                            
+                            <div class="ad-preview-section">
+                                <h3>Photos</h3>
+                                <div class="preview-photos" id="previewPhotos"></div>
+                            </div>
+                            
+                            <div class="ad-preview-section">
+                                <h3>Location</h3>
+                                <p id="previewLocation">Birganj, Adarshnagar</p>
+                            </div>
+                            
+                            <div class="ad-preview-section">
+                                <h3>Contact</h3>
+                                <p id="previewContact">John Doe - 9801234567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="boost-options">
+                            <h3>Boost Your Ad</h3>
+                            <p>Get more visibility for your ad with our promotion options.</p>
+                            
+                            <div class="boost-option">
+                                <div class="boost-checkbox">
+                                    <input type="checkbox" id="featuredAd">
+                                    <label for="featuredAd"></label>
+                                </div>
+                                <div class="boost-details">
+                                    <h4>Featured Ad रू 500</h4>
+                                    <p>Your ad will appear at the top of search results for 7 days.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="boost-option">
+                                <div class="boost-checkbox">
+                                    <input type="checkbox" id="urgentTag">
+                                    <label for="urgentTag"></label>
+                                </div>
+                                <div class="boost-details">
+                                    <h4>Urgent Tag रू 300</h4>
+                                    <p>Add an "Urgent" tag to attract more attention to your ad.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="boost-option">
+                                <div class="boost-checkbox">
+                                    <input type="checkbox" id="highlightAd">
+                                    <label for="highlightAd"></label>
+                                </div>
+                                <div class="boost-details">
+                                    <h4>Highlight Ad रू 200</h4>
+                                    <p>Make your ad stand out with a colored background.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="terms-agreement">
+                            <div class="form-group form-check">
+                                <input type="checkbox" id="termsAgree" required>
+                                <label for="termsAgree">I agree to the <a href="terms.html">Terms & Conditions</a> and <a href="privacy.html">Privacy Policy</a></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button class="btn btn-secondary btn-prev">Back</button>
+                            <button class="btn btn-primary btn-submit" id="submitAd" disabled>Submit Ad</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="images/logo-white.png" alt="SellonX Logo">
+                    </div>
+                    <ul class="footer-links">
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="safety-tips.html">Safety Tips</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-center">
+                    <div class="newsletter">
+                        <h3>Subscribe to our newsletter</h3>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button class="btn btn-subscribe">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SellonX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-container">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Ad Posted Successfully!</h2>
+                <p>Your ad has been submitted and is pending review. It will be visible on the site shortly.</p>
+                <div class="success-actions">
+                    <a href="index.html" class="btn btn-secondary">Go to Home</a>
+                    <a href="post-ad.html" class="btn btn-primary">Post Another Ad</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/post-ad.js"></script>
+</body>
+</html>

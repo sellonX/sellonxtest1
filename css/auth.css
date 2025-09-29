@@ -1,0 +1,172 @@
+/* Auth Modal Styles */
+.auth-container {
+    width: 100%;
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 15px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--gray-color);
+    transition: var(--transition);
+}
+
+.auth-tab.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.btn-google {
+    background-color: #db4437;
+    color: white;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--light-gray);
+}
+
+.divider span {
+    position: relative;
+    background-color: white;
+    padding: 0 10px;
+    color: var(--gray-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.forgot-password {
+    margin-left: auto;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-footer a {
+    color: var(--primary-color);
+}
+
+/* Post Ad Container */
+.post-ad-container {
+    text-align: center;
+}
+
+.post-ad-container h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.post-ad-container p {
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    .social-login {
+        flex-direction: column;
+    }
+    
+    .auth-tabs {
+        flex-direction: column;
+    }
+    
+    .auth-tab {
+        border-bottom: 1px solid var(--light-gray);
+    }
+    
+    .auth-tab.active {
+        border-bottom: 1px solid var(--primary-color);
+    }
+    
+    .form-check {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .forgot-password {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

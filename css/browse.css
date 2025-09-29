@@ -1,0 +1,248 @@
+/* Browse Page Styles */
+
+/* Browse Header */
+.browse-header {
+    background: linear-gradient(rgba(21, 63, 122, 0.8), rgba(21, 63, 122, 0.9)), url('../images/browse-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.browse-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Browse Content */
+.browse-content {
+    padding: 40px 0;
+    background-color: var(--light-color);
+}
+
+.browse-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+}
+
+/* Sidebar */
+.browse-sidebar {
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+}
+
+.sidebar-block {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.sidebar-block h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+/* Category List */
+.category-list {
+    margin: 0;
+    padding: 0;
+}
+
+.category-list li {
+    margin-bottom: 5px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: var(--transition);
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.category-item:hover {
+    background-color: rgba(21, 63, 122, 0.05);
+    color: var(--primary-color);
+}
+
+.category-item i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.subcategory-list {
+    margin-left: 30px;
+    display: none;
+}
+
+.category-list li:hover .subcategory-list {
+    display: block;
+}
+
+.subcategory-list li {
+    margin-bottom: 0;
+}
+
+.subcategory-list a {
+    display: block;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    transition: var(--transition);
+}
+
+.subcategory-list a:hover {
+    color: var(--primary-color);
+}
+
+/* Location Filter */
+.location-filter {
+    margin-top: 10px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-check input {
+    margin-right: 10px;
+}
+
+/* Browse Main */
+.browse-main {
+    width: 100%;
+}
+
+.browse-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.browse-results-count {
+    color: var(--gray-color);
+}
+
+.browse-sort {
+    display: flex;
+    align-items: center;
+}
+
+.browse-sort label {
+    margin-right: 10px;
+    color: var(--gray-color);
+}
+
+.browse-sort select {
+    padding: 8px;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    background-color: var(--white-color);
+    outline: none;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.pagination a.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination a:hover:not(.active) {
+    background-color: var(--light-gray);
+}
+
+.pagination a.next {
+    width: auto;
+    padding: 0 15px;
+}
+
+.pagination a.next i {
+    margin-left: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .browse-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .browse-sidebar {
+        position: static;
+        margin-bottom: 20px;
+    }
+    
+    .sidebar-block {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .browse-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .browse-results-count {
+        margin-bottom: 10px;
+    }
+    
+    .pagination a {
+        width: 35px;
+        height: 35px;
+        margin: 0 3px;
+    }
+}
+
+@media (max-width: 576px) {
+    .browse-header h1 {
+        font-size: 2rem;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+    }
+    
+    .pagination a {
+        margin-bottom: 10px;
+    }
+}
