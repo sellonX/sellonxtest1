@@ -1,0 +1,67 @@
+/* Help Center Page Styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f9f9f9;
+}
+
+.help-center {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.title {
+  color: #1049bd;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.help-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.help-form label {
+  font-weight: 600;
+  color: #1049bd;
+}
+
+.help-form input,
+.help-form select,
+.help-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.help-form input:focus,
+.help-form select:focus,
+.help-form textarea:focus {
+  border-color: #1049bd;
+}
+
+.help-form .btn {
+  padding: 0.75rem;
+  background: #1049bd;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.help-form .btn:hover {
+  background: #0d3a94;
+}
